@@ -42,7 +42,7 @@
                 <th>Motivo</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="table-body">
         <?php
             while ($fila = mysqli_fetch_assoc($resultado)) {
                 echo "<tr>";
@@ -78,8 +78,14 @@
             <input type="submit" value="Exportar a Excel">
         </form>
 
+        <br><br>
+
+        <input type="text" id="search-input" placeholder="Buscar">
+
+
 
 
     </table>
 </body>
+<script src="js/buscador.js"></script>
 </html>
