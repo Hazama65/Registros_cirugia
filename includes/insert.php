@@ -1,6 +1,5 @@
 <?php
     include('db.php');
-
     $conexion=mysqli_connect($host,$user,$password,$database);
 
     if(isset($_POST['enviar'])){
