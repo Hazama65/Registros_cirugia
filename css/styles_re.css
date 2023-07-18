@@ -23,7 +23,7 @@
     }
 
     th {
-        background-color: #4CAF50;
+        background-color: #2a0038;
         color: white;
     }
 
@@ -33,7 +33,7 @@
     }
 
     input[type="submit"] {
-        background-color: #4CAF50;
+        background-color: #2a0038;
         border: none;
         color: white;
         padding: 10px 20px;
@@ -47,6 +47,6 @@
     }
 
     input[type="submit"]:hover {
-        background-color: #45a049;
+        background-color: #e082ff;
     }
 

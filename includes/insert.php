@@ -28,13 +28,14 @@
                 $egreso = trim($_POST['egreso']);
 
                 $pro_ingreso = trim($_POST['pro_ingreso']);
+                $pro_inicio = trim($_POST['pro_inicio']);
                 $ingreso_egreso = trim($_POST['ingreso_egreso']);
                 $ingreso_anestesia = trim($_POST['ingreso_anestesia']);
                 $ingreso_inicio = trim($_POST['ingreso_inicio']);
                 $inicio_fin = trim($_POST['inicio_fin']);
 
                 $horas =  "INSERT INTO tiempos 
-                VALUES ('$programada', '$ingreso', '$anestesia', '$inicio', '$fin', '$egreso', '$pro_ingreso', '$ingreso_egreso', '$ingreso_anestesia', '$ingreso_inicio', '$inicio_fin','$ultimoId')";
+                VALUES ('$programada', '$ingreso', '$anestesia', '$inicio', '$fin', '$egreso', '$pro_ingreso','$pro_inicio', '$ingreso_egreso', '$ingreso_anestesia', '$ingreso_inicio', '$inicio_fin','$ultimoId')";
                 
                 mysqli_query($conexion,$horas);
 

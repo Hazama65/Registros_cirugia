@@ -32,6 +32,7 @@ $columnas = array(
     'Hora Fin Cirugía',
     'Hora Egreso Sala',
     'Programada - Ingreso',
+    'Programada - Inicio',
     'Ingreso - Egreso Sala',
     'Ingreso - Inicio Anestesia',
     'Ingreso Sala - Inicio Cirugía',

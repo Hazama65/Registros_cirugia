@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/styles_index.css">
 </head>
 <body>
-    <h1>Formulario de ejemplo</h1>
+    <h1>Registro Cirugia Ambulatoria</h1>
 
     <form action="includes/insert.php" method="POST" autocomplete="off">
 
@@ -31,7 +31,7 @@
 
         <!-- datos de ingreso-egreso -->
 
-        <label for="programado">Hora Programda</label>
+        <label for="programado">Hora Programada</label>
         <input type="time" name="programado" id="programado">
 
         <label for="ingreso">Hora Ingreso a Sala</label>
@@ -51,8 +51,11 @@
 
         <!-- Calculo de los tiempos -->
 
-        <label for="pro_ingreso">Programda - Ingreso Sala</label>
+        <label for="pro_ingreso">Programada - Ingreso Sala</label>
         <input type="text" name="pro_ingreso" id="pro_ingreso"  readonly >
+
+        <label for="pro_inicio">Programada - Inicio cirugía</label>
+        <input type="text" name="pro_inicio" id="pro_inicio"  readonly >
 
         <label for="ingreso_egreso">Ingreso - Egreso Sala</label>
         <input type="text" name="ingreso_egreso" id="ingreso_egreso"  readonly>

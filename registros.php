@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registros</title>
     <link rel="stylesheet" href="css/styles_re.css">
 </head>
 <body>
@@ -33,6 +33,7 @@
                 <th>Hora Fin Cirugía</th>
                 <th>Hora Egreso Sala</th>
                 <th>Hora programada - Ingreso</th>
+                <th>Hora programada - Inicio</th>
                 <th>Ingreso - Egreso Sala</th>
                 <th>Ingreso - Inicio Anestesia</th>
                 <th>Ingreso Sala - Inicio Cirugía</th>
@@ -58,6 +59,7 @@
                 echo "<td>" . $fila['fin'] . "</td>";
                 echo "<td>" . $fila['egreso'] . "</td>";
                 echo "<td>" . $fila['programada_ingreso'] . "</td>";
+                echo "<td>" . $fila['programada_inicio'] . "</td>";
                 echo "<td>" . $fila['ingreso_egreso'] . "</td>";
                 echo "<td>" . $fila['ingreso_anestesia'] . "</td>";
                 echo "<td>" . $fila['ingreso_inicio'] . "</td>";
@@ -81,8 +83,6 @@
         <br><br>
 
         <input type="text" id="search-input" placeholder="Buscar">
-
-
 
 
     </table>
