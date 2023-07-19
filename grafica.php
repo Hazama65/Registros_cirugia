@@ -16,7 +16,7 @@
     </form>
     <div class="chart-container">
         <div>
-            <canvas id="programadaingreso"></canvas>
+            <canvas id="usoSalas"></canvas>
         </div>
     
         <div>
@@ -64,8 +64,9 @@
 
         // consultas
         const medicos = <?php echo $medicos; ?>;
+        const salas =<?php echo $salas; ?>;
 
-        const horasPIng = <?php echo $PIng; ?>;
+        const usoSalas =<?php echo $usoSalas; ?>;
         const horasPIni = <?php echo $PIni; ?>;
         const horasIE = <?php echo $IE; ?>;
         const horasIA = <?php echo $IA; ?>;
@@ -77,7 +78,6 @@
         const suspenciones = <?php echo $susp; ?>;
 
         // conversiones
-        const horasConvertidosPIng = horasPIng.map(convertToMinutes);
         const horasConvertidosPIni = horasPIni.map(convertToMinutes);
         const horasConvertidosIE = horasIE.map(convertToMinutes);
         const horasConvertidosIA = horasIA.map(convertToMinutes);
@@ -89,11 +89,11 @@
 
 
         // Datos del primer gráfico
-        var dataPIng = {
-            labels: medicos,
+        var dataSalas = {
+            labels: salas,
             datasets: [{
-                label: "Hora programada - Ingreso Cirugía",
-                data: horasConvertidosPIng,
+                label: "Usos de sala",
+                data: usoSalas,
                 backgroundColor: coloresBarras,
                 borderColor: "rgba(0,0,0,0)",
                 borderWidth: 1
@@ -227,11 +227,11 @@
         };
         
         // Crear el primer gráfico
-        var ctxPIng = document.getElementById("programadaingreso").getContext("2d");
-        var ctxPIng = new Chart(ctxPIng, {
+        var ctxsalas = document.getElementById("usoSalas").getContext("2d");
+        var ctxsalas = new Chart(ctxsalas, {
             type: "bar",
-            data: dataPIng,
-            options: optionshr
+            data: dataSalas,
+            options: options
         });
         // Crear el segundo gráfico
         var ctxPIni = document.getElementById("programadainicio").getContext("2d");

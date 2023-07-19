@@ -11,16 +11,24 @@
             $medicos[] = $fila["medico"];
         }};
 
+    $sala = "SELECT sala FROM datos_cirugia GROUP BY sala";
 
-    $programadoIngreso= "SELECT SEC_TO_TIME(AVG(TIME_TO_SEC(tiempos.programada_ingreso))) AS promedioIngreso_horas
-    FROM datos_cirugia
-    JOIN tiempos ON datos_cirugia.id_cirugia = tiempos.id_cirugia GROUP BY medico";
+    $result11 = $conexion->query($sala);
+    if ($result11->num_rows > 0) {
 
-    $result9 = $conexion->query($programadoIngreso);
-    if ($result9->num_rows > 0){
-        $PIng = array();
-        while ($fila = $result9->fetch_assoc()){
-            $PIng[] = $fila["promedioIngreso_horas"];
+        $salas = array();
+        while ($fila = $result11->fetch_assoc()) {
+            $salas[] = $fila["sala"];
+        }};
+
+
+    $u_salas= "SELECT COUNT(*) as usosalas FROM datos_cirugia GROUP BY sala";
+
+    $result11 = $conexion->query($u_salas);
+    if ($result11->num_rows > 0){
+        $usoSalas = array();
+        while ($fila = $result11->fetch_assoc()){
+            $usoSalas[] = $fila["usosalas"];
         }
     };
 
@@ -126,7 +134,8 @@
 
     
     $medicos = json_encode($medicos);
-    $PIng = json_encode($PIng);
+    $salas = json_encode($salas);
+    $usoSalas = json_encode($usoSalas);
     $PIni = json_encode($PIni);
     $IE = json_encode($IE);
     $IA = json_encode($IA);
